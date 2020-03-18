@@ -1,0 +1,125 @@
+1. 获取钱包下的所有购买的domain的总数
+url:  /api/domain/getDomainTotal
+method: post
+request: {"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D"}
+response: {"state":1,
+           "data":13}
+
+2. 获取钱包下的所有购买的domain 列表
+url: /api/domain/getDomainList
+method: post
+request: {"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D",
+          "pageNumber":1,
+          "pageSize":3}
+response: {"state":1,"owner":"0x3D002404deee63697fBEf95657DcE57335BF561D","data":[
+					{"name":"liao","expire":1583734806,"openApplied":false,"hash":"0xa4256546741ae78e509e2168486b5c8ae64998a485bcc5c8492fcf9cd980b351"},
+					{"name":"exp.liao","expire":1583734806,"openApplied":false,"hash":"0xbbedd4056f47fbaba43a75eaa4d0b42db6be8e4f35f955fc69ab26d5e2c25a69"},
+					{"name":"1.liao","expire":1615274987,"openApplied":false,"hash":"0xd60b3c9e2f93aff041bfbb099f5372ae2fd21ebae7ce4b7d83ff675a1ca78c8b"}]
+
+3. 获取域名配置信息、持有人信息、顶级域名持有人信息（如果是二级域名）
+url: /api/domain/domainInfo
+method: post
+request:  {"domainname":"rickey.eth"}
+response: {"state":1,"dnsinfo":{"name":"rickey.eth",
+                                "ipv4":"",
+                                "ipv6":"",
+                                "bcaddr":"0x3D002404deee63697fBEf95657DcE57335BF561D",
+                                "alias":"",
+                                "extrainfo":"",
+                                "domainhash":"0x604906326443f6024a73d3f2a276368b60421d8f1ab4f9ba44a6a9406f5d7f0e"},
+                   "assetinfo":{"name":"rickey.eth",
+                                "expire":1615880918,
+                                "owner":"0x3D002404deee63697fBEf95657DcE57335BF561D",
+                                "isroot":false,
+                                "ropentopublic":false,
+                                "riscustomed":false,
+                                "rispurea":false,
+                                "rcustomeprice":"0",
+                                "domainhash":"0x604906326443f6024a73d3f2a276368b60421d8f1ab4f9ba44a6a9406f5d7f0e",
+                "parentdomain":{"name":"eth",
+                                "expire":1615880789,
+                                "owner":"0x3D002404deee63697fBEf95657DcE57335BF561D",
+                                "isroot":true,
+                                "ropentopublic":true,
+                                "riscustomed":true,
+                                "rispurea":true,
+                                "rcustomeprice":"100000000000000000000",
+                                "domainhash":"0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0",
+                                "parentdomain":null}}}
+
+4. 转出域名时，当用户输入域名时，自动补全
+url: /api/domain/domainSell
+method: post
+request: {"text":"e","wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D"}或者{"text":"e"}
+response: {"state":1,"domainhashpair":[{"domainname":"exp.cai","walletaddress":"0x9ccCbDe29DeED16c9d88415259c27cdf9368A5A2","expire":1583734806},
+                                       {"domainname":"eth.lws","walletaddress":"0xea8a3a416799d582bC46987E084886524E7449Df","expire":1615704506}]}
+
+5. 注册域名时，查询域名是否存在，如果存在返回域名的持有信息
+url: /api/domain/registerDomain
+method: post
+request: {"domainname":"rickey.eth"}
+response: {"state":1,"domainrecord":{"name":"rickey.eth",
+                                     "expire":1615880918,
+                                     "owner":"0x3D002404deee63697fBEf95657DcE57335BF561D",
+                                     "isroot":false,
+                                     "ropentopublic":false,
+                                     "riscustomed":false,
+                                     "rispurea":false,
+                                     "rcustomeprice":"0",
+                     "parentdomain":{"name":"eth",
+                                     "expire":1615880789,
+                                     "owner":"0x3D002404deee63697fBEf95657DcE57335BF561D",
+                                     "isroot":true,
+                                     "ropentopublic":true,
+                                     "riscustomed":true,
+                                     "rispurea":true,
+                                     "rcustomeprice":"100000000000000000000",
+                                     "parentdomain":null}}}
+
+6. 获取免费测试网eth
+url: /api/contact/freeEth
+method: post
+request: {"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D"}
+response: {"state":0,"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D","amount":"","errmsg":"You have Applied"}
+
+7. 获取免费bas
+url: /api/contact/freeBas
+method: post
+request: {"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D"}
+response: {"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D","state":0,"errmsg":"Your Applying is running","amount":""}
+
+8. 查询获取eth、bas的状态
+url: /api/contact/freeCoinState
+method: post
+request: {"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D","type":1}
+response: {"wallet":"0x3D002404deee63697fBEf95657DcE57335BF561D","type":1,"state":2,"msg":"Success"}
+notes: state 0 --no state in memory, maybe you have not apply free coin
+       state 1 --applying, please wait
+       state 2 --apply success
+       state 3 --apply failure
+
+9. 域名自动补全（待后续讨论）
+url: /api/autocomplete
+method: post
+request: {"text":"r"}
+response: {"state":1,"data":["ll.lanbery",
+                             "pornhub.com",
+                             "porn",
+                             "twitter.com",
+                             "microsoft",
+                             "baidusearch",
+                             "rickey.ame",
+                             "testrot1",
+                             "rickey.eth",
+                             "rickey.btc",
+                             "pinterest.com"]}
+
+
+
+
+
+
+
+
+
+
