@@ -105,3 +105,35 @@
   ]
 }
 ```
+
+
+## DApp State Initial Interface 
+> DApp 状态参数初始化接口
+
+> url /api/dappstate/getInit
+
+  * method: POST/GET
+  * request
+
+```js 
+{
+
+}
+```
+
+> Response
+
+``` js 
+{
+  symbol:"BAS",
+  decimals:18,
+  arootgas:500*10**18,
+  brootgas:20*10**18,
+  customedpricegas:100*10**18,
+  maxyear:5,
+  raretypelength:6,
+  subgas:4*10**18,
+  aliasmaxlength:256,
+  extrainfomaxlength:512
+}
+```
