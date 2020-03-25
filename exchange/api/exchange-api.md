@@ -125,15 +125,14 @@
 
 ``` js 
 {
-  symbol:"BAS",
+  symbol:'BAS',
   decimals:18,
-  arootgas:500*10**18,
-  brootgas:20*10**18,
-  customedpricegas:100*10**18,
-  maxyear:5,
-  raretypelength:6,
-  subgas:4*10**18,
-  aliasmaxlength:256,
-  extrainfomaxlength:512
+  rareGas:500*(10**18),
+  topGas:20*(10**18),
+  subGas:4*(10**18),
+  customedPriceGas:100*(10**18),
+  maxYearReg:5,
+  aliasMaxLen:256,
+  extrainfoMaxLen:512
 }
 ```
