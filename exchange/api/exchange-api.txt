@@ -115,6 +115,50 @@ response: {"state":1,"data":["ll.lanbery",
                              "pinterest.com"]}
 
 
+10. 获取初始参数
+url: /api/contact/basBasicSettings
+method: get post
+req: none
+response: {"arootgas":"500000000000000000000",
+           "brootgas":"20000000000000000000",
+           "subgas":"4000000000000000000",
+           "custompricegas":"100000000000000000000",
+           "maxyear":5,
+
+11. 强制刷新初始参数
+url: /api/contact/basBasicSettings?refresh=true
+method: get post
+req: none
+response: Refresh Success
+
+12. 二级域名推荐
+url: /api/domain/RecommendDomains
+method: post
+req: {"pagenumber":1,"pagesize":5,"searchdomains":"aa.eth"}
+response: {"state":1,"totalcnt":44,"pagenumber":1,"pagesize":5,"registered":null,"recommend":[
+        {"recommendname":"aa.eth",
+         "rootdomain":{"dnsinfo":{"name":"eth","ipv4":"","ipv6":"","bcaddr":"","alias":"","extrainfo":"","domainhash":"0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0"},
+                      "assetinfo":{"name":"eth","expire":1615880789,"owner":"0x3D002404deee63697fBEf95657DcE57335BF561D","isroot":true,"ropentopublic":true,"riscustomed":true,"rispurea":true,"rcustomeprice":"100000000000000000000","domainhash":"0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0","parentdomain":null}}},
+        {"recommendname":"aa.mi",
+         "rootdomain":{"dnsinfo":{"name":"mi","ipv4":"","ipv6":"","bcaddr":"","alias":"","extrainfo":"","domainhash":"0x1c17bda1d2b87292d0f0f0711f0895fb5d38a772d107feed0f760d296d10a62d"},
+         "assetinfo":{"name":"mi","expire":1615701600,"owner":"0x5a821767986A9f1172E5096B0a83926528765A26","isroot":true,"ropentopublic":true,"riscustomed":true,"rispurea":true,"rcustomeprice":"9900000000000000000","domainhash":"0x1c17bda1d2b87292d0f0f0711f0895fb5d38a772d107feed0f760d296d10a62d","parentdomain":null}}},
+        {"recommendname":"aa.ha",
+         "rootdomain":{"dnsinfo":{"name":"ha","ipv4":"","ipv6":"","bcaddr":"","alias":"","extrainfo":"","domainhash":"0xfcabc8e9c35074360a22ad52bf706d17c03c13d442fdef1f61632c6285fdd6d5"},
+         "assetinfo":{"name":"ha","expire":1741765229,"owner":"0x413367ffd0e8b254990686Ccd9A9eF4Ac629e745","isroot":true,"ropentopublic":true,"riscustomed":true,"rispurea":true,"rcustomeprice":"300000000000000000000","domainhash":"0xfcabc8e9c35074360a22ad52bf706d17c03c13d442fdef1f61632c6285fdd6d5","parentdomain":null}}},
+        {"recommendname":"aa.bbvm",
+         "rootdomain":{"dnsinfo":{"name":"bbvm","ipv4":"","ipv6":"","bcaddr":"","alias":"","extrainfo":"","domainhash":"0xbee66b1550d387f7350e4903ac98ed6a1abb61a4981698b945d15b140388a133"},
+         "assetinfo":{"name":"bbvm","expire":1616211440,"owner":"0xe28A402cF39d132D6258d18B94727CC6C00aD7ea","isroot":true,"ropentopublic":true,"riscustomed":false,"rispurea":true,"rcustomeprice":"4000000000000000000","domainhash":"0xbee66b1550d387f7350e4903ac98ed6a1abb61a4981698b945d15b140388a133","parentdomain":null}}},
+         {"recommendname":"aa.163",
+          "rootdomain":{"dnsinfo":{"name":"163","ipv4":"61.135.169.125","ipv6":"","bcaddr":"","alias":"","extrainfo":"","domainhash":"0x1b6edb65b6c2611a7285cc668f4110f574a7bc3b0d28690b40a16f141eada39a"},
+          "assetinfo":{"name":"163","expire":1615269878,"owner":"0x5D34272bC26E5d6e475fbF25f63832b02f25Fb2a","isroot":true,"ropentopublic":false,"riscustomed":false,"rispurea":true,"rcustomeprice":"0","domainhash":"0x1b6edb65b6c2611a7285cc668f4110f574a7bc3b0d28690b40a16f141eada39a","parentdomain":null}}}]}
+
+13. 顶级域名列表
+url: /api/domain/tldList
+method: post
+req: {"pagenumber":1,"pagesize":50}
+response: {"state":1,"totalcnt":44,"pagenumber":1,"pagesize":50,"domains":["1","lws","ltd","fil","bas","btc","xbox","mi","bbvm","163","ha",
+           "cai","g","f","apple","zg","vip","x","nimie","a","so","bit","inc","go","sunzy","tv","io","aac","whois","yta","eth","chain","com",
+           "sina","one","cnm","porn","find","cvn","bmw","ni","nijj","hash","ipfs"]}
 
 
 
