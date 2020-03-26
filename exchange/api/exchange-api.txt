@@ -160,6 +160,27 @@ response: {"state":1,"totalcnt":44,"pagenumber":1,"pagesize":50,"domains":["1","
            "cai","g","f","apple","zg","vip","x","nimie","a","so","bit","inc","go","sunzy","tv","io","aac","whois","yta","eth","chain","com",
            "sina","one","cnm","porn","find","cvn","bmw","ni","nijj","hash","ipfs"]}
 
+14. 最近注册的域名
+url: /api/domain/LatestRegisters
+method: post
+req: {"pagenumber":1,"pagesize":2,"top":0}
+     其中top值为0表示顶级域名，top值为1表示顶级普通域名，top值为2为2级域名，top值为3位3级域名... top值为257表示非一级域名
+resp: {"state":1,"totalpage":2,"pagenumber":1,"pagesize":2,
+      "latestdomains":[{"dnsinfo":{"name":"eth","ipv4":"","ipv6":"","bcaddr":"","alias":"","extrainfo":"","domainhash":"0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0"},
+                       "assetinfo":{"name":"eth","expire":1616687213,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865","isroot":true,"ropentopublic":true,"riscustomed":true,"rispurea":true,"rcustomeprice":"5000000000000000000","domainhash":"0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0","regtime":1585151213,"parentdomain":null}},
+                       {"dnsinfo":{"name":"163","ipv4":"","ipv6":"","bcaddr":"","alias":"","extrainfo":"","domainhash":"0x1b6edb65b6c2611a7285cc668f4110f574a7bc3b0d28690b40a16f141eada39a"},
+                       "assetinfo":{"name":"163","expire":1616658572,"owner":"0x5D34272bC26E5d6e475fbF25f63832b02f25Fb2a","isroot":true,"ropentopublic":false,"riscustomed":false,"rispurea":true,"rcustomeprice":"0","domainhash":"0x1b6edb65b6c2611a7285cc668f4110f574a7bc3b0d28690b40a16f141eada39a","regtime":1585122572,"parentdomain":null}}]}
+
+15. 最贵的域名
+ur:/api/domain/ExpensiveDomains
+method: post
+req:{"pagenumber":1,"pagesize":2}
+resp:{"state":0,"totalpage":0,"pagenumber":1,"pagesize":2,"domains":null}  --暂时没有数据
+16. 顶级域名下的二级域名列表
+17. 我的挂单
+18. 出售中的域名
+19. 最受欢迎的域名
+20. 搜索挂单
 
 
 
