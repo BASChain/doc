@@ -188,6 +188,19 @@ resp: {"state":1,"totalpage":3,"pagenumber":1,"pagesize":50,"domains":[{"domain"
                                                                        {"domain":"xn--qei","price":"20000000000000000000","regtime":1585283813,"expiretime":1616768218,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"}]}
 
 18. 最受欢迎的域名
+
+url:/api/domain/favoriteDomainList
+method: post
+req:{"pagenumber":1,"pagesize":50}
+resp:{"state":1,"totalpage":6,"pagenumber":1,"pagesize":50,
+      "domains":[{"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865","name":"eth","expiretime":1616746340,"regtime":1585210340,"price":"6990000000000000000","hash":"0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0","subdomaincount":2},
+                 {"owner":"0x5D34272bC26E5d6e475fbF25f63832b02f25Fb2a","name":"btc","expiretime":1616744329,"regtime":1585208329,"price":"1000000000000000000000","hash":"0x4bac7d8baf3f4f429951de9baff555c2f70564c6a43361e09971ef219908703d","subdomaincount":2},
+                 {"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865","name":"bas","expiretime":1616746563,"regtime":1585210563,"price":"4250000000000000000","hash":"0x1afc1e6d002095d67ae3d63e7ab2500b3675166cbe7353af950c3c2e82cec592","subdomaincount":1},
+                 {"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865","name":"apple","expiretime":1616748194,"regtime":1585212194,"price":"4000000000000000000","hash":"0x85dca312121b082f39dd34192d69dffd93c0add33dac13f7846f2975fba845c6","subdomaincount":0},
+                 {"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865","name":"google","expiretime":1616747930,"regtime":1585211930,"price":"4000000000000000000","hash":"0x8f2f90d8304f6eb382d037c47a041d8c8b4d18bdd8b082fa32828e016a584ca7","subdomaincount":0},
+                 {"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865","name":"lanbery","expiretime":1616747088,"regtime":1585211088,"price":"4000000000000000000","hash":"0x00f69be5c125d6ec3023374357cb911088ab1a7e72b3f9d1eb5fc68dc3e1aa1a","subdomaincount":0}]}
+
+
 19. 搜索挂单
 url: /api/market/marketSearch
 method: post
