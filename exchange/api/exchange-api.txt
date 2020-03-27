@@ -177,10 +177,25 @@ method: post
 req:{"pagenumber":1,"pagesize":2}
 resp:{"state":0,"totalpage":0,"pagenumber":1,"pagesize":2,"domains":null}  --暂时没有数据
 16. 顶级域名下的二级域名列表
-17. 我的挂单
-18. 出售中的域名
-19. 最受欢迎的域名
-20. 搜索挂单
+
+17. 我的挂单 和 出售中的域名
+url: /api/market/SellingDomainList
+method: post
+req: {"pagenumber":1,"pagesize":50,"wallet":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"}
+    如果有wallet参数，只列出当前wallet下的挂单
+resp: {"state":1,"totalpage":3,"pagenumber":1,"pagesize":50,"domains":[{"domain":"lanbery.eth","price":"4000000000000000000","regtime":1585283042,"expiretime":1616759968,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"},
+                                                                       {"domain":"apple","price":"500000000000000000000","regtime":1585283272,"expiretime":1616748194,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"},
+                                                                       {"domain":"xn--qei","price":"20000000000000000000","regtime":1585283813,"expiretime":1616768218,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"}]}
+
+18. 最受欢迎的域名
+19. 搜索挂单
+url: /api/market/marketSearch
+method: post
+req:{"pagenumber":1,"pagesize":50,"text":"app"}
+resp:{"state":1,"totalpage":1,"pagenumber":1,"pagesize":50,"domains":[{"domain":"apple","price":"500000000000000000000","regtime":1585283272,"expiretime":1616748194,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"}]}
+
+
+
 
 
 
