@@ -177,6 +177,15 @@ method: post
 req:{"pagenumber":1,"pagesize":2}
 resp:{"state":0,"totalpage":0,"pagenumber":1,"pagesize":2,"domains":null}  --暂时没有数据
 16. 顶级域名下的二级域名列表
+url:/api/mywallet/subDomainList
+method:post
+req:{"pagenumber":1,"pagesize":50,"rootdomain":"eth"}
+resp:{"state":1,"totalpage":3,"pagenumber":1,"pagesize":50,
+      "subdomains":[{"domain":"lanbery.eth","regtime":1585223968,"expiretime":1616759968,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"},
+                    {"domain":"eth","regtime":1585210340,"expiretime":1616746340,"owner":"0xFd30d2c32E6A22c2f026225f1cEeA72bFD9De865"},
+                    {"domain":"xn--qei.eth","regtime":1585232004,"expiretime":1616768004,"owner":"0x3D002404deee63697fBEf95657DcE57335BF561D"}]}
+
+
 
 17. 我的挂单 和 出售中的域名
 url: /api/market/SellingDomainList
