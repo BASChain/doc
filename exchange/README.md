@@ -9,3 +9,5 @@
 | Global  | [Global apis](./wiki/global-api.md) |
 | Home  | [Home apis](./wiki/home-api.md) |
 | Apply Domain  | [Apply Domain](./wiki/apply-api.md)  |
+| Wallet Page  | [Wallet Page](./wiki/wallet-api.md)  |
+
