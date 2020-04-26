@@ -64,9 +64,9 @@ options: {                      //Optional
 }
 ```
 
-> Response Object 
+> Return Object 
 
-```json
+```js
 {
   ethBalance:12.23456*10**18 ,  //ETH wei(string)
   basBalance:10000*10**18,      //BAS wei(string)
@@ -125,6 +125,8 @@ params={
 ## getDomain
 
 > get Domain Details by hash 
+
+<font style="color:red">if unfound maybe throw Error</font>
 
 > methods 
 
