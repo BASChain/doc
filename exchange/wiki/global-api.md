@@ -1,5 +1,11 @@
 # Global APIs
 
+## set global web3 provider
+
+> when DApp DOM loaded will set SDK web3 provider
+
+> ?
+
 
 ## load DApp Configuration
 
@@ -40,4 +46,128 @@ return Promise() or callback
 }
 ```
 
-###
+## load balances
+
+> When DApp listener watched MetaMask login then load balances
+
+### API 
+
+> Methods loadBalances(chainId,wallet,options={})
+
+> Request Params 
+
+```bash
+chainId:3,                      //required
+wallet:'0xaf..0fd8a',           //required
+options: {                      //Optional
+  web3js,
+}
+```
+
+> Response Object 
+
+```json
+{
+  ethBalance:12.23456*10**18 ,  //ETH wei(string)
+  basBalance:10000*10**18,      //BAS wei(string)
+  drawWei:125*10**18,           //Draw Balance (string)
+}
+```
+
+## findDomain
+
+> find Domain by string 
+
+> Methods 
+
+findDomain(
+params={
+  qstr:'',                      //required, like 'eth' 'eth.io',''
+  chianId:3,                    //required 
+},options={                     //Optional
+  web3js
+})
+
+> Return Object 
+
+```js 
+{
+  state:1,                                        //1 has result ,0 no result
+  error:'',                                       // when state 0 ,error can set error msg like qstr Illegal ed. (like qstr 'eth.okex&_')
+  domain:{                                        // when state 0 ,no this data
+    name:'eth',
+    owner:'0x23..',
+    hash:'0xdf....',
+    expire:157473723,
+    isRoot:true,
+    openApplied:true,
+    isCustomed:true,
+    customPrice:'1250000000000000000000',         // Custom defined price (wei)
+  },
+  root:{                                          //state = 1 and parent domain exist
+    name:'eth',
+    owner:'0x123...',
+    hash:'0xdf....',
+    expire:157473723,
+    isRoot:true,
+    openApplied:true,
+    isCustomed:true,
+    customPrice:'1250000000000000000000',         // Custom defined price (wei)    
+  },
+  dns:{                                           //state = 1 
+    ipv4:['',''],                                 //if ipv4 not set value=[]
+    ipv6:['',''],                                 //if ipv6 not set value=[]
+    ...
+  }
+}
+```
+
+## getDomain
+
+> get Domain Details by hash 
+
+> methods 
+
+```js 
+getDomainByHash(params={
+  hash:'0xad...',                                   //required 
+  chainId:3                                         //required
+},options = {
+  web3js,
+})
+```
+
+> Return Object 
+
+```js 
+{
+  state:1,                                        //state = 1 success , state =0 fail
+  error:'not found',                              //state = 0 
+  domain:{                                        // when state 0 ,no this data
+    name:'eth',
+    owner:'0x23..',
+    hash:'0xdf....',
+    expire:157473723,
+    isRoot:true,
+    openApplied:true,
+    isCustomed:true,
+    customPrice:'1250000000000000000000',         // Custom defined price (wei)
+  },
+  root:{                                          //state = 1 and parent domain exist
+    name:'eth',
+    owner:'0x123...',
+    hash:'0xdf....',
+    expire:157473723,
+    isRoot:true,
+    openApplied:true,
+    isCustomed:true,
+    customPrice:'1250000000000000000000',         // Custom defined price (wei)    
+  },
+  dns:{                                           //state = 1 
+    ipv4:['',''],                                 //if ipv4 not set value=[]
+    ipv6:['',''],                                 //if ipv6 not set value=[]
+    ...
+  }    
+}
+```
+
