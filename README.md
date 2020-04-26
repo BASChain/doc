@@ -1,8 +1,6 @@
 # doc
 test case, api, etc...
 
-## Page API list
+## BAS Exchange WIKI
+[![](./exchange/images/logo_header_blk.png "BAS Exchange API")](./exchange/README.md)
 
-|  module  |  API WIKI  |
-|  ----  |  ----  |
-| Home  | [Home apis](./exchange/wiki/home-api.md) |
