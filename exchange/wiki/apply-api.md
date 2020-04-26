@@ -74,7 +74,7 @@ if valid false throw Error() or return Promise.reject(10001)
 
 > ....
 
- 
+
 
 ##  Approve Token
 
@@ -92,6 +92,49 @@ params={
 
 ```
 
+## Regist Root Domain 
+
+> Method 
+
+```js 
+registRootEmitter(
+  params={
+    domaintext:'',                                      //required
+    openApplied:true,                                   //required
+    isCustomed:true,                                    //required
+    customPrice:'20000000000000000000000000',           //required
+    years:1,                                            //required
+    chainId:3,                                          //required
+  },options={
+    wallet:'0x8afde...fa67'                              //Optional
+    web3js,                                              //Optional
+  })
+```
+
+> return function 
+
+** Emitter Function  **
+
+## Regist Sub Domain 
+
+> Methods 
+
+```js 
+registSubEmitter (
+  params={
+    roottext:'',                                          //required rootDomain text string (handle.trim().toLowerCase())
+    subtext:'',                                           //required subdomain text string (handle trim().toLowerCase())
+    years:1,
+    chainId:3,
+    wallet:''
+  },
+  options:{
+    web3js
+  })
+```
+> return function 
+
+** Emitter Function  **
 
 
 
