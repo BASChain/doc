@@ -16,5 +16,5 @@ options={
   web3js
 })
 
-> See Global API Docs ![goto](./global-api.md##findDomain)
+> See Global API Docs [goto](./global-api.md##findDomain)
 
