@@ -126,7 +126,7 @@ params={
 
 > get Domain Details by hash 
 
-<div class="text-red"align="">
+<div class="text-red">
   <h3 >If unfound maybe throw Error</h3>
 </div>
 
